@@ -15,6 +15,7 @@ struct NODE
 	char info;
 	NODE* next;
 };
+
 bool Palindrome(NODE* p, NODE* q);
 void MakeStack(int x, NODE* &p);
 void MakeQueue(int x, NODE* &p);
@@ -27,6 +28,7 @@ int main()
 		NODE* StackList=NULL;
 		NODE* QueueList=NULL;
 		char p[10]={};
+
 		//Read phrase into stack and queue
 		cout << "	Enter a phrase: ";
 		char c;
@@ -78,6 +80,7 @@ bool Palindrome(NODE* p, NODE* q)
 	//if(test == 0)return true;
 	return true;
 }
+
 //creates stack
 void MakeStack(int x, NODE* &p)
 {
@@ -85,6 +88,7 @@ void MakeStack(int x, NODE* &p)
 	q=new(NODE); q->info=x; q->next=NULL;
 	q->next=p; p=q;
 }
+
 //creates queue
 void MakeQueue(int x, NODE* &p)
 {
@@ -100,6 +104,7 @@ void MakeQueue(int x, NODE* &p)
 		t->next=q;
 	}
 }
+
 /*------------------------------------------------------------------------
     Enter a phrase: A Toyota
         Is a PALINDROME
